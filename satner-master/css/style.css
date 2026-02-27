@@ -3330,4 +3330,174 @@ h6 {
 ============================================================================================ */
 /*---------------------------------------------------- */
 
+/* Simple global animation helpers
+============================================================================================ */
+@keyframes fadeInUpSoft {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSoft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Utility classes (can be reused in other pages if needed) */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeInSoft 0.8s ease-out forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-4 {
+  animation-delay: 0.4s;
+}
+
+/* Apply soft entrance animations to key sections on page load */
+.home_banner_area .banner_inner .banner_content {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.9s ease-out forwards;
+}
+
+.about_area .about_img,
+.about_area .main_title {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.9s ease-out forwards;
+}
+
+.features_area .feature_item {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.8s ease-out forwards;
+}
+
+.portfolio_area .main_title,
+.portfolio_area .portfolio_box {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.8s ease-out forwards;
+}
+
+.newsletter_area .subscription_box {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.9s ease-out forwards;
+}
+
+.footer_area .footer_top,
+.footer_area .footer_bottom {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpSoft 0.9s ease-out forwards;
+}
+
+/* Staggered delays for groups to feel more alive */
+.features_area .feature_inner .col-lg-3:nth-child(1) .feature_item,
+.features_area .feature_inner .col-md-6:nth-child(1) .feature_item {
+  animation-delay: 0.05s;
+}
+
+.features_area .feature_inner .col-lg-3:nth-child(2) .feature_item,
+.features_area .feature_inner .col-md-6:nth-child(2) .feature_item {
+  animation-delay: 0.15s;
+}
+
+.features_area .feature_inner .col-lg-3:nth-child(3) .feature_item,
+.features_area .feature_inner .col-md-6:nth-child(3) .feature_item {
+  animation-delay: 0.25s;
+}
+
+.features_area .feature_inner .col-lg-3:nth-child(4) .feature_item,
+.features_area .feature_inner .col-md-6:nth-child(4) .feature_item {
+  animation-delay: 0.35s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(1) .portfolio_box {
+  animation-delay: 0.05s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(2) .portfolio_box {
+  animation-delay: 0.1s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(3) .portfolio_box {
+  animation-delay: 0.15s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(4) .portfolio_box {
+  animation-delay: 0.2s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(5) .portfolio_box {
+  animation-delay: 0.25s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(6) .portfolio_box {
+  animation-delay: 0.3s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(7) .portfolio_box {
+  animation-delay: 0.35s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(8) .portfolio_box {
+  animation-delay: 0.4s;
+}
+
+.portfolio_area .portfolio-grid > div:nth-child(9) .portfolio_box {
+  animation-delay: 0.45s;
+}
+
+/* Slightly enhance existing hover states for cards and buttons */
+.portfolio_box,
+.feature_item,
+.testi_item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio_box:hover,
+.feature_item:hover,
+.testi_item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.primary_btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 14px 30px rgba(118, 85, 225, 0.35);
+}
+
 /*# sourceMappingURL=style.css.map */
